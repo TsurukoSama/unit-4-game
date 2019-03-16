@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Unit 4 Game</title>
+    <script href="../hw-wk4/java.js"></script>
+    <link rel="stylesheet" type="text/css" href="../hw-wk4/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="background: rgb(241, 105, 13); height: 100px; width: 260px; text-align: center">
+        <h1>Crystals Collector!</h1>
+    </div>
+    <div style="background: rgb(255, 208, 176); height: 330px; width: 400px;">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score.</p>
+        <p>You win the game by matching your total score to the random number. You lose the game if your total score
+            goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts the game will change the values of each crystal.</p>
+    </div>
+    <br>
+    <div>
+        <div id="randDiv" style="background:forestgreen; height:150px; width: 250px; display: inline-block"> <span id="number-to-guess"></span></div>
+        <div id="counterDiv" style="background:turquoise; height:150px; width:100px; display: inline-block"></div>
+    </div>
+    <br>
+    <img id="cry1" src="../hw-wk4/crystals1.png" style="display: inline-block; height:100px; width:100px;">
+    <img id="cry2" src="../hw-wk4/crystals2.png" style="display: inline-block; height:100px; width:100px;">
+    <img id="cry3" src="../hw-wk4/crystals3.png" style="display: inline-block; height:100px; width:100px;">
+    <img id="cry4" src="../hw-wk4/crystals4.png" style="display: inline-block; height:100px; width:100px;">
+    <br><br>
+    <div id="score" style="background:teal; width:250px">Your total score is:</div>
+    <br>
+    <div id="scoreDiv" style="background:teal; height: 130px; width:250px;"></div>
+<script>
+    var targetNumber = Math.floor(Math.random() *100)
+  
+    $("#number-to-guess").text(targetNumber);
+  
+    var counter = 0;
+  
+  
+    var numberOptions = [Math.floor(Math.random()* 10), Math.floor(Math.random()* 10),Math.floor(Math.random()* 10) ];
+    $("#cry1").on("click", function() {
+        counter += Math.floor(Math.random()* 10)
+        alert("Your new score is: " + counter);
+    })
+    $("#cry2").on("click", function() {
+        counter += Math.floor(Math.random()* 10)
+        alert("Your new score is: " + counter);
+    })
+
+    $("#cry3").on("click", function() {
+        counter += Math.floor(Math.random()* 10)
+        alert("Your new score is: " + counter);
+    })
+
+    $("#cry4").on("click", function() {
+        counter += Math.floor(Math.random()* 10)
+        alert("Your new score is: " + counter);
+    })
+     if (counter === targetNumber){
+        alert("You win!")
+}
+else if (counter >= targetNumber) {
+alert("You lose!!");
+}
+  
+</script>
+</body>
+</html>

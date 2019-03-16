@@ -1,0 +1,24 @@
+body{
+background-image: url(../hw-wk4/bananas.png);
+background-repeat: repeat; 
+}
+h1{
+color: white;
+text-align: center;
+float: left;
+ }
+p{
+    color: green;
+    font-weight: bolder;
+}
+
+#score {
+    color: white;
+    font-weight: bolder;
+}
+
+#randDiv {
+    color: purple;
+    font-weight: bolder;
+    font-size:24px; 
+}
